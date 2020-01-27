@@ -49,11 +49,10 @@ myBarchart3 =
 
         enc =
             encoding
-                << position X [ pName "Month", pTemporal ]
-                << position Y [ pName "NumberOfHires", pQuant ]
-                << color [ mName "AvHireTime", mQuant ]
+                << position X [ pName "NumberOfHires", pQuant ]
+                << position Y [ pName "AvHireTime", pQuant ]
     in
-    toVegaLite [ width 540, data [], enc [], trail [] ]
+    toVegaLite [ width 540, height 540, data [], enc [], circle [] ]
 ```
 
 ```elm {v}
@@ -69,5 +68,5 @@ myBarchart4 =
                 << position Y [ pName "Percent", pQuant ]
                 << color [ mName "Answer", mNominal ]
     in
-    toVegaLite [ width 540, data [], enc [], area [] ]
+    toVegaLite [ width 540, data [], enc [], bar [] ]
 ```

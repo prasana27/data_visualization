@@ -1,0 +1,1057 @@
+<!DOCTYPE html><html ns-role="label" ns-label-name="aim" ns-label-kind="paired"><head>
+      <title>session01</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/prasanakalanathan/.atom/packages/markdown-preview-enhanced-with-litvis/node_modules/mume-with-litvis/dependencies/katex/katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export" ns-role="label-child">
+      <div class="mume markdown-preview  " id="litvis">
+      <div><style>
+/* narrative schema: /Users/prasanakalanathan/Documents/HCI/data_visualization/datavis/narrative-schemas/teaching.yml */
+.todo {
+  font-style: italic;
+  background: yellow;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-left: 1em;
+}
+legend {
+  font-size:0.9em; font-style: italic; text-align: right;
+}
+
+.aim fieldset {
+    background: #eee;
+    padding 1em;
+}
+
+.elmExample fieldset {
+  background: #EDFAFF;
+}
+
+.haskellExample fieldset {
+    background: #F9F7FF;
+  }
+
+.elmExample fieldset pre, .haskellExample fieldset pre {
+    border: 0 !important;
+  }
+
+.elmExample fieldset pre, .haskellExample fieldset pre {
+    background-color: rgba(255, 255, 255, 0);
+    padding : 0em;
+    margin : 0em;
+  }
+
+.elmExample, .haskellExample, .task, .annotation {
+  margin-top: 0.1em;
+  margin-bottom: 1em;
+
+}
+
+.task fieldset {
+  background: #fffafa;
+  border-color: #a66;
+}
+
+.annotation fieldset {
+  font-size: 1.2em;
+  font-family: caveat, cursive !important;
+}
+
+.infobox {
+  background: #eee;
+  margin-left: 2em;
+  margin-bottom:1em;
+  padding: 1em;
+  padding-bottom: 0.5em;
+}
+</style><style>@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Caveat Regular'), local('Caveat-Regular'), url(https://fonts.gstatic.com/s/caveat/v7/Wnz6HAc5bAfYB2Q7ZjYd.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v7/Yq6R-LCAWCX3-6Ky7FAFrOF6lw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZJ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Merriweather Black'), local('Merriweather-Black'), url(https://fonts.gstatic.com/s/merriweather/v21/u-4n0qyriQwlOrhSvowK_l52_wFZWMf_.ttf) format('truetype');
+}
+#litvis {
+  font-family: "Merriweather", serif;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: 1.45;
+}
+#litvis h1,
+#litvis h2,
+#litvis h3,
+#litvis h4,
+#litvis h5,
+#litvis h6 {
+  font-family: "Fjalla One", sans-serif;
+}
+#litvis blockquote {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-size: 12.1pt;
+  background-color: #f6f6f6;
+  margin-right: 2em;
+}
+#litvis blockquote h1,
+#litvis blockquote h2,
+#litvis blockquote h3,
+#litvis blockquote h4,
+#litvis blockquote h5,
+#litvis blockquote h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+}
+#litvis code,
+#litvis pre {
+  background-color: rgba(255, 255, 255, 0);
+}
+#litvis pre {
+  border: solid 1px #ccc;
+  border-radius: 8px;
+}
+#litvis div[data-role="litvisOutput"] > span {
+  font-family: iosevka, monospace;
+  font-weight: bold;
+  font-size: 17.6pt;
+  display: block;
+  margin-bottom: 0.75em;
+  border-style: none none none solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding-left: 0.5em;
+}
+#litvis input[type="radio"],
+#litvis input[type="checkbox"],
+#litvis input[type="select"],
+#litvis input[type="range"] {
+  margin-left: 1em;
+}
+#litvis input[type="range"] {
+  min-width: 120px;
+  max-width: 120px;
+}
+</style>
+<h1 class="mume-header" id="session-1-literate-visualization">Session 1: Literate Visualization</h1>
+
+<h2 class="mume-header" id="table-of-contents">Table of Contents</h2>
+
+<ol>
+<li><a href="#1-what-is-data-visualization?">What is Data Visualization?</a></li>
+<li><a href="#2-literate-visualization-and-litvis">Literate Visualization and Litvis</a></li>
+<li><a href="#3-data-visualization-models">Data Visualization Models</a></li>
+<li><a href="#4-conclusions">Conclusions</a></li>
+<li><a href="#5-recommended-reading">Recommending Reading</a></li>
+<li><a href="#6-practical-exercises">Practical Exercises</a></li>
+</ol>
+<div class="aim" ns-role="label-child"><fieldset ns-role="label-child"><legend ns-role="label-child">Aim</legend>
+<p>This session is designed to introduce the process of designing and building data visualizations following principles of <em>literate visualization</em>. It introduces the notebook environment <em>litvis</em>, which allows you to specify visualization designs and to explain your design choices.</p>
+<p>By the end of this session you should be able to:</p>
+<ul>
+<li>Critique a data visualization based on 5 simple criteria.</li>
+<li>Install the <em>Atom</em> editor with the <em>litvis</em> plug-in on your computer.</li>
+<li>Write simple markdown text in a litvis document.</li>
+<li>Specify a simple visualization using elm-vegalite.</li>
+<li>Begin to relate a visualization design and specification to Munzner&apos;s &apos;what-why-how&apos; framework.</li>
+<li>Begin to relate a visualization specification to Wilkinson&apos;s 7 <em>Grammar of Graphics</em> steps.</li>
+</ul>
+</fieldset></div>
+<hr>
+<h2 class="mume-header" id="1-what-is-data-visualization">1. What is Data Visualization?</h2>
+
+<p>Data visualization is a comparatively recent discipline to emerge from the need to analyse and communicate patterns in complex datasets. While there is a long history of using pictures and graphics to represent data, we can consider modern data visualization as often having a number of identifiable characteristics:</p>
+<ol>
+<li>Represents a complex dataset graphically that could not as effectively be represented via other means.</li>
+<li>Often emphasises <em>connections</em> and <em>comparisons</em> between items of data.</li>
+<li>Frequently involves <em>interaction</em> to allow a user to influence what they see.</li>
+<li>A &quot;<em>narrative</em> providing a clear answer to a question without extraneous details&quot; (Fry, 2008 p.4).</li>
+<li>Generates an <em>aesthetic response</em> in order to encourage users to engage with the data or question.</li>
+</ol>
+<p>What unites these characteristics is that they acknowledge the &quot;human in the loop&quot; of the visualization process. That is, while we use computers to help generate visualizations, it is at its heart a human process relying on human cognition and response to support human activity. This is important to recognise so that we don&apos;t put effort into designing and implementing visualization for tasks that are more readily achieved by computation alone.</p>
+<p>One of the skills you will develop over the course of this module is the <em>design critique</em>. That doesn&apos;t mean being negative about a visualization design, but rather providing a justified set of judgements about what does and does not work effectively in a visualization. Using the five criteria above is just one of many ways in which you might structure such a critique.</p>
+<div class="task" ns-role="label-child"><fieldset ns-role="label-child"><legend ns-role="label-child">Task</legend>
+<p>Consider the data visualizations <a href="https://www.informationisbeautifulawards.com/showcase?action=index&amp;award=2019&amp;controller=showcase&amp;page=1&amp;pcategory=short-list&amp;type=awards">shortlisted for the 2019 Information is Beautiful awards</a>. Using the 5 criteria listed above, select what you think represents a good example of data visualization from the shortlist. Jot down a brief justification of your choice for each of the 5 criteria. Are there any examples in that list that clearly fail as data visualizations?</p>
+<p>If you are viewing these notes in <a href="#2-literate-visualization-and-litvis">litvis</a> to can write your answers below.</p>
+</fieldset></div>
+<div class="annotation" ns-role="label-child"><fieldset ns-role="label-child"><legend ns-role="label-child">my annotation</legend>
+<p>Add your 5-point critique here:</p>
+</fieldset></div>
+<p>If you want to explore a wider range of recent data visualizations, this <a href="https://www.maartenlambrechts.com/2019/12/23/the-list-of-2019-visualization-lists.html">list of lists</a> from Maarten Lambrechts is a good place to start.</p>
+<p>In her book <a href="#5-recommended-reading">Visualization Analysis and Design</a>, Tamara Munzner asks an important question &#x2014; <strong>why do data visualization?</strong> (Munzner, 2015, pp.1-9). This is important because in answering it, you should find it easier to design effective data visualizations. She considers a &apos;decision-making loop&apos; where the visualization helps you to decide something, perhaps where to invest resources, what further information to gather, what action to take etc. She considers both the &apos;computer in the loop&apos; and the &apos;human in the loop&apos;. In other words, what is it that computation can offer in supporting decision making and what is it that humans can offer.</p>
+<p>As an example, imagine you have a dataset that represents reported crime in various districts in a region. If you simply wanted the answer to the question &quot;which district has the highest reported crime?&quot;, data visualization would probably not be very helpful here because you could answer the question with a simple database query (i.e. it is the computer in the loop). If on the other hand a crime analyst wanted to know whether reported crime reflected similar patterns and trends to perceived crime patterns or they wanted to explore the data to see if there were any unexpected patterns or outliers that might suggest a change in policy, visualization might be more useful (i.e. decision-making that requires the human in the loop).</p>
+<div class="infobox" ns-role="label-child">
+<p>If you design a data visualization to answer a question such as what is characteristic x in my dataset? (e.g. which country has the highest GDP?), data visualization will have little to offer that you couldn&#x2019;t find out more easily with a simple database query. Good data visualization answers more complex questions that don&#x2019;t have an easily computable answer.</p>
+</div>
+<p>Over the coming weeks, we well refine our critical ability to evaluate good design in data visualization. We will consider models, rules and heuristics that assist effective design, from the use of colour and symbolisation to layout and interaction. This should help you both to evaluate others&apos; data visualizations, and to design your own more effectively.</p>
+<h3 class="mume-header" id="11-what-do-we-see-when-we-visualize-data">1.1 What do we see when we visualize data?</h3>
+
+<p>Imagine we have some quantity represented by these 80 lines &#x2014; the length of each line represents the magnitude of some variable. Spend 30 seconds looking at the image below and consider what it tells you about the data the lines represent.</p>
+<p><img src="https://staff.city.ac.uk/~jwo/datavis2020/session01/images/lines80.png" alt="80 lines"></p>
+<div class="annotation" ns-role="label-child"><fieldset ns-role="label-child"><legend ns-role="label-child">my annotation</legend>
+<p>Add your initial observations about the data represented by these 80 lines here.</p>
+</fieldset></div>
+<p>In class we will spend some time asking questions about the data represented by these lines. In doing so, we will consider how visualization design and understanding of human perception and cognition can help us help us design more effectively.</p>
+<h2 class="mume-header" id="2-literate-visualization-and-litvis">2. Literate Visualization and Litvis</h2>
+
+<p>In this module we will approach visualization design using <em>literate visualization</em>. This involves not only writing the code to generate data visualizations (<em>&quot;what&quot;</em> specifications), but also combining the visualizations with a textual narrative that explains your design choices (<em>&quot;why&quot;</em> justifications). We will consider frameworks to help you structure those justifications over the coming weeks so that you become more adept and efficient at data visualization design.</p>
+<div class="infobox" ns-role="label-child">
+<p>For more detail on literate visualization as a process and litvis as a technology, see <a href="#5-recommended-reading">Wood et al, 2019</a> and this video presentation <a href="https://youtu.be/pMHmQX3TZ8A">Why not how! Telling Visualization Design Stories</a>. The general portal for literate visualization can be found at <a href="http://litvis.org">litvis.org</a></p>
+</div>
+<p>The elements of literate visualization are summarised below:</p>
+<p><img src="https://staff.city.ac.uk/~jwo/datavis2020/session01/images/litvisApproach.png" alt="litvis approach"></p>
+<p>To make the process easier we will be using software called <em>litvis</em> to allow you to specify visualization designs and integrate them with your design justifications. Litvis is a form of &apos;notebook&apos; environment similar to <a href="https://jupyter.org">Jupyter</a>, <a href="https://beta.observablehq.com">Observable</a> or <a href="https://rmarkdown.rstudio.com">R-markdown</a> that integrate text, code and rendered output.</p>
+<h3 class="mume-header" id="21-setting-up-litvis">2.1 Setting Up Litvis</h3>
+
+<p>Before you can get going writing litvis documents you need to <a href="https://staff.city.ac.uk/~jwo/datavis2020/programming/installingLitvis.pdf">install the <em>Atom</em> editor with the litvis plug-in</a>. The process is a little fiddly, but once you have set things up on your machine, you shouldn&apos;t need to do so again.</p>
+<div class="task" ns-role="label-child"><fieldset ns-role="label-child"><legend ns-role="label-child">Task</legend>
+<p>If you are reading these notes in advance of the lectures (which I encourage you to do each week!), now might be a good time to <a href="https://staff.city.ac.uk/~jwo/datavis2020/programming/installingLitvis.pdf">install the <em>Atom</em> editor with litvis</a> on your computer.</p>
+<p>If, additionally, you download and uncompress <a href="http://staff.city.ac.uk/~jwo/datavis2020/programming/datavis.zip">datavis.zip</a> somewhere on your computer, this will create a useful folder structure with supplementary files for organising your litvis documents:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>&#x2517;&#x2501;&#x2501; datavis
+        &#x2523;&#x2501;&#x2501; coursework
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkPG.md
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkUG.md
+        &#x2503;     &#x2517;&#x2501;&#x2501; proposal.md
+        &#x2523;&#x2501;&#x2501; css
+        &#x2503;     &#x2517;&#x2501;&#x2501; datavis.less
+        &#x2523;&#x2501;&#x2501; narrative-schemas
+        &#x2503;     &#x2523;&#x2501;&#x2501; algebra.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkPG.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkUG.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; dialogue.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; feminist.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; idiom.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; proposal.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; tdia.yaml
+        &#x2503;     &#x2517;&#x2501;&#x2501; teaching.yaml
+        &#x2523;&#x2501;&#x2501; session01
+        &#x2503;     &#x2523;&#x2501;&#x2501; session01.md
+        &#x2503;     &#x2517;&#x2501;&#x2501; codingGym.md
+        &#x2523;&#x2501;&#x2501; session02
+        &#x2523;&#x2501;&#x2501; session03
+        &#x2523;&#x2501;&#x2501; session04
+        &#x2523;&#x2501;&#x2501; session05
+        &#x2523;&#x2501;&#x2501; session06
+        &#x2523;&#x2501;&#x2501; session07
+        &#x2523;&#x2501;&#x2501; session08
+        &#x2523;&#x2501;&#x2501; session09
+        &#x2517;&#x2501;&#x2501; session10
+</code></pre></fieldset></div>
+<p>Whenever you need to create a new litvis document, just open Atom and create a new document with the <code>.md</code> extension.</p>
+<p>A litvis document looks like the following:</p>
+<p><img src="https://staff.city.ac.uk/~jwo/datavis2020/session01/images/litvisAnatomy.png" alt="litvis anatomy"></p>
+<p><em>Frontmatter</em> is enclosed by a pair of <code>---</code> and can contain references to any coding libraries and <em>narrative schemas</em> (see below) that you wish to take advantage of in your document.</p>
+<p>Below the frontmatter is the main body of the document that will contain a mixture of text to display and code to generate visualizations.</p>
+<h3 class="mume-header" id="22-textual-narrative">2.2 Textual Narrative</h3>
+
+<p>To write text in litvis you use <a href="https://guides.github.com/features/mastering-markdown/">Github-Flavored markdown</a>, which is an easy-to-learn way of writing formatted text. It is designed to be readable both in its &apos;raw&apos; form and when formatted.</p>
+<p>For example, here is how a heading, paragraph of text containing a hyperlink, and a bulleted list may be written in markdown and litvis:</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> Visualization Analysis &amp; Design</span>
+
+A <span class="token url">[book by Tamara Munzner](https://tinyurl.com/ycqp5cf2)</span> that covers the <span class="token italic"><span class="token punctuation">_</span>motivations<span class="token punctuation">_</span></span>,
+<span class="token italic"><span class="token punctuation">_</span>approaches<span class="token punctuation">_</span></span> and <span class="token italic"><span class="token punctuation">_</span>techniques<span class="token punctuation">_</span></span> for designing and building data visualizations.
+Its approach is practitioner-focussed but built on a sound theoretical framework.
+Some of the key elements of the book are:
+
+<span class="token list punctuation">-</span> What: Data abstraction
+<span class="token list punctuation">-</span> Why : Task abstraction
+<span class="token list punctuation">-</span> Validating visualization
+<span class="token list punctuation">-</span> Marks and channels
+<span class="token list punctuation">-</span> Analysis case studies
+</pre><p>When formatted, it might look like this:</p>
+<blockquote>
+<h1>Visualization Analysis &amp; Design</h1>
+<p>A <a href="https://tinyurl.com/ycqp5cf2">book by Tamara Munzner</a> that covers the <em>motivations</em>, <em>approaches</em> and <em>techniques</em> for designing and building data visualizations. Its approach is practitioner-focussed but built on a sound theoretical framework.<br>
+Some of the key elements of the book are:</p>
+<ul>
+<li>What: Data abstraction</li>
+<li>Why : Task abstraction</li>
+<li>Validating visualization</li>
+<li>Marks and channels</li>
+<li>Analysis case studies</li>
+</ul>
+</blockquote>
+<p>To help guide you writing a document, you can follow <em>narrative schemas</em>, which are sets of <em>labels</em>, <em>rules</em> and <em>styles</em> that may be used in your document. For example, we might have a label called <code>aim</code> and a rule that says every document that follows the schema must contain at least one aim. Additionally, the schema might include a <em>style</em> that highlights any text inside a pair of labels. A pair of &apos;aim&apos; labels in a litvis document might look like this:</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown">{(aim|} Some text here {|aim)}
+</pre><p>We will look at narrative schemas in later weeks when we consider different models for validating visualization designs.</p>
+<h3 class="mume-header" id="23-visualization-specification">2.3 Visualization Specification</h3>
+
+<p>To create visual depictions of data we need to specify the rules by which elements of data are transformed into something we can see and possibly interact with. We will be doing that by using the <a href="https://vega.github.io/vega-lite/">Vega-Lite</a> grammar of interactive graphics. Vega-Lite reflects a <em>declarative</em> approach to visualization creation. That is, you don&apos;t specify <em>how</em> to create a graphic (as you might in a programming language like Java or Python), but instead <em>what</em> you want the graphic design to be. For those familiar with relational databases, you can think of Vega-Lite as a visualization equivalent of <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>.</p>
+<p>In its native form, a Vega-Lite visualization specification is expressed as <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> (JavaScript Object Notation). While this is a flexible and web-friendly way of representing data, it is not very easy to work with directly, especially when visualization specifications become more complex. Instead, in Litvis, we will use the language <a href="https://elm-lang.org">Elm</a> to generate Vega-Lite JSON specifications, with the library <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/">elm-vegalite</a>.</p>
+<div class="infobox" ns-role="label-child">
+<p>Elm is likely to be an entirely new language to almost all of you, and for many, your first programming language. For those who have taken the module <em>IN3043 Functional Programming</em> and have used <a href="https://www.haskell.org">Haskell</a>, here is a <a href="https://staff.city.ac.uk/~jwo/datavis2020/programming/haskell.pdf">comparison of Haskell and Elm</a>. Don&apos;t worry if this is all new to you &#x2013; Elm is designed to be beginner friendly and we will build our use of Elm slowly and steadily though this module.</p>
+<p>In parallel with the visualization lab exercises for this module, you can also find regular <a href="https://staff.city.ac.uk/~jwo/datavis2020/session01/codingGym.pdf">coding gym</a> exercises that will help you learn the basics of the Elm language. Doing so should make it easier and quicker for you to create visualization specifications.</p>
+</div>
+<h4 class="mume-header" id="london-bicycle-hires">London Bicycle Hires</h4>
+
+<p>Suppose we wished to create a data visualization that helps us understand the patterns of (Santander) bicycle hires in London over an eight year period. We have access to a <a href="https://gicentre.github.io/data/bicycleHiresLondon.csv">dataset from TfL</a> that records the number of hires per month and the average length of time a bike was hired.</p>
+<p>Here is a litvis document with a visualization specification that does this (you can copy this into a new litvis document called <code>bicyclehires.md</code> if you wish to try it for yourself):</p>
+<pre data-role="codeBlock" data-info class="language-"><code>---
+elm:
+  dependencies:
+    gicentre/elm-vegalite: latest
+---
+
+```elm {l=hidden}
+import VegaLite exposing (..)
+```
+
+```elm {v}
+myBarchart : Spec
+myBarchart =
+    let
+        data =
+            dataFromUrl &quot;https://gicentre.github.io/data/bicycleHiresLondon.csv&quot;
+
+        enc =
+            encoding
+                &lt;&lt; position X [ pName &quot;Month&quot;, pTemporal ]
+                &lt;&lt; position Y [ pName &quot;NumberOfHires&quot;, pQuant ]
+    in
+    toVegaLite [ width 540, data [], enc [], bar [] ]
+```
+</code></pre><p>The three lines at the top encased in a pair of <code>---</code> form the <em>frontmatter</em> and in this case state that we wish to use the Elm language with the package <code>elm-vegalite</code>. By including this dependency, Litvis will download the elm-vegalite package and store it locally on your machine.</p>
+<p>The rest of the document contains two <em>code blocks</em>, each identified by a pair of triple backticks.</p>
+<p>The first code block has the <em>header</em> <code>elm {l=hidden}</code> which means the block will contain Elm code but its contents should be hidden in the formatted view. The content itself &#x2013; <code>import VegaLite exposing (..)</code> means &quot;<em>make all the functions that come with the Vega-Lite package available to all code blocks in this document</em>&quot;. This is a necessary first step in order to make use of the library that will convert your Elm code into Vega-Lite JSON for rendering.</p>
+<p>Most of your litvis documents will have a very similar first 9 lines as above, so you can usually just copy/paste them whenever you need to create a new document.</p>
+<h4 class="mume-header" id="a-bar-chart-specification">A bar chart specification</h4>
+
+<p>Now let&apos;s consider the second code block. It has the header <code>elm {v}</code> which indicates that the code block is written in Elm and should create a visualization. The block itself contains the main visualization specification which we will consider line by line:</p>
+<pre data-role="codeBlock" data-info="elm {l highlight=[1,2,3,4,5,6,7,8,9,10,11,12]}" class="language-elm" data-line="1,2,3,4,5,6,7,8,9,10,11,12"><span class="token hvariable">myBarchart</span> <span class="token operator">:</span> <span class="token constant">Spec</span>
+<span class="token hvariable">myBarchart</span> <span class="token operator">=</span>
+    <span class="token keyword">let</span>
+        <span class="token hvariable">data</span> <span class="token operator">=</span>
+            <span class="token hvariable">dataFromUrl</span> <span class="token string">&quot;https://gicentre.github.io/data/bicycleHiresLondon.csv&quot;</span>
+
+        <span class="token hvariable">enc</span> <span class="token operator">=</span>
+            <span class="token hvariable">encoding</span>
+                <span class="token operator">&lt;&lt;</span> <span class="token hvariable">position</span> <span class="token constant">X</span> <span class="token punctuation">[</span> <span class="token hvariable">pName</span> <span class="token string">&quot;Month&quot;</span><span class="token punctuation">,</span> <span class="token hvariable">pTemporal</span> <span class="token punctuation">]</span>
+                <span class="token operator">&lt;&lt;</span> <span class="token hvariable">position</span> <span class="token constant">Y</span> <span class="token punctuation">[</span> <span class="token hvariable">pName</span> <span class="token string">&quot;NumberOfHires&quot;</span><span class="token punctuation">,</span> <span class="token hvariable">pQuant</span> <span class="token punctuation">]</span>
+    <span class="token keyword">in</span>
+    <span class="token hvariable">toVegaLite</span> <span class="token punctuation">[</span> <span class="token hvariable">width</span> <span class="token number">540</span><span class="token punctuation">,</span> <span class="token hvariable">data</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">enc</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">bar</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">]</span>
+<div class="line-highlight-wrapper"><div aria-hidden="true" class="line-highlight" data-range="1" data-start="1">
+</div></div><div class="line-highlight-wrapper">
+<div aria-hidden="true" class="line-highlight" data-range="2" data-start="2">
+</div></div><div class="line-highlight-wrapper">
+
+<div aria-hidden="true" class="line-highlight" data-range="3" data-start="3">
+</div></div><div class="line-highlight-wrapper">
+
+
+<div aria-hidden="true" class="line-highlight" data-range="4" data-start="4">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="5" data-start="5">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="6" data-start="6">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="7" data-start="7">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="8" data-start="8">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="9" data-start="9">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="10" data-start="10">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="11" data-start="11">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="12" data-start="12">
+</div></div></pre><p>Programs in Elm work by defining <em>functions</em> that perform specific tasks. In this case we have created a function called <code>myBarChart</code> (named in lines 1 and 2) that will provide the visualization specification. The name of the function is up to you, but it makes sense to give it a name that describes what the function does in some way. Function names in Elm should be in <a href="https://en.wikipedia.org/wiki/Camel_case">lowerCamelCase</a>. There are two lines in a main function declaration the first (line 1) states that the function <code>myBarChart</code> will provide a <code>Spec</code> when it is executed. A Spec is elm-vegalite&apos;s name for a visualization specification; all the visualization specifications you will write will return a <code>Spec</code> in this way. Below that (line 2), we name the function again with an <code>=</code> symbol below which is the code that actually creates the specification.</p>
+<p>Within the <code>myBarChart</code> function, we can define further functions using <code>let..in</code> (lines 3-11). Most specifications you write will include at least two of these - one that states the source of the data you will be visualizing (lines 4-5 in this example) and one to specify the <em>encoding rules</em> that declare which elements of the data will be transformed into which visual <em>channels</em> (lines 7-10 in this example).</p>
+<p>Visual encoding is achieved by calling elm-vega&apos;s <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#encoding">encoding</a> function (line 8) and then <em>chaining</em> a series of channel encoding rules with the <code>&lt;&lt;</code> symbol (lines 9-10).</p>
+<p>Line 9 can be translated as &quot;<em>encode the temporal data in the <code>Month</code> column of the dataset as the x (horizontal) position in the visualization</em>&quot;. Likewise, line 10 says &quot;<em>encode the quantitative data in the <code>NumberOfHires</code> column of the dataset as the y (vertical) position in the visualization</em>&quot;. When encoding a channel (a <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#position">position</a> channel in this example), it is possible to specify a range of encoding options, so these are separated by commas and encased in <code>[</code> ... <code>]</code> indicating an Elm <a href="https://package.elm-lang.org/packages/elm/core/latest/List">list</a>.</p>
+<p><code>pTemporal</code> and <code>pQuant</code> are examples of <em>positional measurement types</em>. The possible types include:</p>
+<table>
+<thead>
+<tr>
+<th>Measurement type</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Nominal</code></td>
+<td>Categories that have no order</td>
+<td>People&apos;s names; country names</td>
+</tr>
+<tr>
+<td><code>Ordinal</code></td>
+<td>Ordered categories</td>
+<td>Small / Medium / Large; 1st, 2nd, 3rd</td>
+</tr>
+<tr>
+<td><code>Quant</code></td>
+<td>Quantitative numerical measurements and counts</td>
+<td>Price; temperature; frequency</td>
+</tr>
+<tr>
+<td><code>Temporal</code></td>
+<td>Time-related</td>
+<td>Dates; times</td>
+</tr>
+<tr>
+<td><code>Geo</code></td>
+<td>Geographic locations</td>
+<td>Longitude/Latitude; country outline</td>
+</tr>
+</tbody>
+</table>
+<p>Finally, line 12 assembles the data and encoding functions in another list and further specifies that the data items should be specified with the <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#bar">bar mark</a> and that the visualization should be 540 pixels wide. The entire specification is now represented by this list which is passed to the <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#toVegaLite">toVegaLite</a> function to convert it into JSON ready for rendering.</p>
+<p>When viewed in Litvis, the specification generates the following visualization:</p>
+<p></p><div data-role="litvisOutput" style="display: inline;"><p interactive="false" style="display: inline-block"><!--?xml version="1.0" encoding="utf-8"?-->
+
+<svg class="marks" width="617" height="242" viewBox="0 0 617 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><rect width="617" height="242" style="fill: white;"/><g transform="translate(72,5)"><g class="mark-group role-frame root"><g transform="translate(0,0)"><path class="background" d="M0.5,0.5h540v200h-540Z" style="fill: none; stroke: #ddd;"/><g><g class="mark-group role-axis"><g transform="translate(0.5,200.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-grid" style="pointer-events: none;"><line transform="translate(37,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(101,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(164,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(228,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(291,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(355,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(419,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(482,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-grid" style="pointer-events: none;"><line transform="translate(0,200)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,169)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,138)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,108)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,77)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,46)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,15)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-group role-axis"><g transform="translate(0.5,200.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-tick" style="pointer-events: none;"><line transform="translate(37,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(101,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(164,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(228,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(291,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(355,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(419,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(482,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-label" style="pointer-events: none;"><text text-anchor="middle" transform="translate(37.02627257961074,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2011</text><text text-anchor="middle" transform="translate(100.55665024775398,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2012</text><text text-anchor="middle" transform="translate(164.26108374512503,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2013</text><text text-anchor="middle" transform="translate(227.79146141326825,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2014</text><text text-anchor="middle" transform="translate(291.3218390814115,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2015</text><text text-anchor="middle" transform="translate(354.85221674955477,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2016</text><text text-anchor="middle" transform="translate(418.55665024692576,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2017</text><text text-anchor="middle" transform="translate(482.08702791506903,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2018</text></g><g class="mark-rule role-axis-domain" style="pointer-events: none;"><line transform="translate(0,0)" x2="540" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-title" style="pointer-events: none;"><text text-anchor="middle" transform="translate(270,30)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">Month</text></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-tick" style="pointer-events: none;"><line transform="translate(0,200)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,169)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,138)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,108)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,77)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,46)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,15)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-label" style="pointer-events: none;"><text text-anchor="end" transform="translate(-7,203)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">0</text><text text-anchor="end" transform="translate(-7,172.23076923076923)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">200,000</text><text text-anchor="end" transform="translate(-7,141.46153846153845)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">400,000</text><text text-anchor="end" transform="translate(-7,110.6923076923077)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">600,000</text><text text-anchor="end" transform="translate(-7,79.92307692307692)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">800,000</text><text text-anchor="end" transform="translate(-7,49.153846153846146)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1,000,000</text><text text-anchor="end" transform="translate(-7,18.384615384615373)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1,200,000</text></g><g class="mark-rule role-axis-domain" style="pointer-events: none;"><line transform="translate(0,200)" x2="0" y2="-200" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-title" style="pointer-events: none;"><text text-anchor="middle" transform="translate(-55.4873046875,100) rotate(-90) translate(0,-2)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">NumberOfHires</text></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-rect role-mark marks"><path d="M2.5000000016974324,198.08292307692307h5v1.9170769230769338h-5Z" style="fill: #4c78a8;"/><path d="M7.895730707758913,147.50723076923074h5v52.492769230769255h-5Z" style="fill: #4c78a8;"/><path d="M13.291461413820395,116.79092307692306h5v83.20907692307694h-5Z" style="fill: #4c78a8;"/><path d="M18.513136290654085,116.24430769230769h5v83.75569230769231h-5Z" style="fill: #4c78a8;"/><path d="M23.908866996715567,129.7993846153846h5v70.20061538461539h-5Z" style="fill: #4c78a8;"/><path d="M29.13054187354926,156.06553846153847h5v43.934461538461534h-5Z" style="fill: #4c78a8;"/><path d="M34.52627257961074,137.97261538461538h5v62.02738461538462h-5Z" style="fill: #4c78a8;"/><path d="M39.92200328567222,138.7243076923077h5v61.27569230769231h-5Z" style="fill: #4c78a8;"/><path d="M44.795566504050335,114.43769230769232h5v85.56230769230768h-5Z" style="fill: #4c78a8;"/><path d="M50.19129721011181,96.36323076923077h5v103.63676923076923h-5Z" style="fill: #4c78a8;"/><path d="M55.4129720869455,88.91199999999999h5v111.08800000000001h-5Z" style="fill: #4c78a8;"/><path d="M60.80870279300699,101.73584615384614h5v98.26415384615386h-5Z" style="fill: #4c78a8;"/><path d="M66.03037766984068,91.00707692307692h5v108.99292307692308h-5Z" style="fill: #4c78a8;"/><path d="M71.42610837590216,101.16307692307691h5v98.83692307692309h-5Z" style="fill: #4c78a8;"/><path d="M76.82183908196365,94.64923076923077h5v105.35076923076923h-5Z" style="fill: #4c78a8;"/><path d="M82.04351395879733,90.95353846153846h5v109.04646153846154h-5Z" style="fill: #4c78a8;"/><path d="M87.4392446648588,108.12446153846153h5v91.87553846153847h-5Z" style="fill: #4c78a8;"/><path d="M92.6609195416925,137.1186153846154h5v62.881384615384604h-5Z" style="fill: #4c78a8;"/><path d="M98.05665024775398,123.95h5v76.05h-5Z" style="fill: #4c78a8;"/><path d="M103.45238095381548,125.87292307692309h5v74.12707692307691h-5Z" style="fill: #4c78a8;"/><path d="M108.50000000142137,74.1216923076923h5v125.8783076923077h-5Z" style="fill: #4c78a8;"/><path d="M113.89573070748285,100.08107692307692h5v99.91892307692308h-5Z" style="fill: #4c78a8;"/><path d="M119.11740558431654,57.391999999999996h5v142.608h-5Z" style="fill: #4c78a8;"/><path d="M124.51313629037801,67.87615384615384h5v132.12384615384616h-5Z" style="fill: #4c78a8;"/><path d="M129.73481116721172,43.97323076923077h5v156.02676923076922h-5Z" style="fill: #4c78a8;"/><path d="M135.1305418732732,21.05061538461539h5v178.94938461538462h-5Z" style="fill: #4c78a8;"/><path d="M140.52627257933466,43.823846153846155h5v156.17615384615385h-5Z" style="fill: #4c78a8;"/><path d="M145.74794745616836,68.17446153846154h5v131.82553846153846h-5Z" style="fill: #4c78a8;"/><path d="M151.14367816222983,88.17030769230769h5v111.82969230769231h-5Z" style="fill: #4c78a8;"/><path d="M156.36535303906354,121.00861538461538h5v78.99138461538462h-5Z" style="fill: #4c78a8;"/><path d="M161.76108374512503,112.9863076923077h5v87.0136923076923h-5Z" style="fill: #4c78a8;"/><path d="M167.1568144511865,120.52492307692306h5v79.47507692307694h-5Z" style="fill: #4c78a8;"/><path d="M172.03037766956461,122.36753846153844h5v77.63246153846156h-5Z" style="fill: #4c78a8;"/><path d="M177.4261083756261,98.73384615384614h5v101.26615384615386h-5Z" style="fill: #4c78a8;"/><path d="M182.6477832524598,84.62553846153847h5v115.37446153846153h-5Z" style="fill: #4c78a8;"/><path d="M188.04351395852126,74.826h5v125.174h-5Z" style="fill: #4c78a8;"/><path d="M193.26518883535496,46.345384615384624h5v153.65461538461537h-5Z" style="fill: #4c78a8;"/><path d="M198.66091954141643,60.89923076923076h5v139.10076923076923h-5Z" style="fill: #4c78a8;"/><path d="M204.0566502474779,92.04246153846154h5v107.95753846153846h-5Z" style="fill: #4c78a8;"/><path d="M209.2783251243116,96.28399999999999h5v103.71600000000001h-5Z" style="fill: #4c78a8;"/><path d="M214.67405583037308,120.90061538461538h5v79.09938461538462h-5Z" style="fill: #4c78a8;"/><path d="M219.89573070720678,131.70123076923076h5v68.29876923076924h-5Z" style="fill: #4c78a8;"/><path d="M225.29146141326825,124.02h5v75.98h-5Z" style="fill: #4c78a8;"/><path d="M230.68719211932972,119.54769230769232h5v80.45230769230768h-5Z" style="fill: #4c78a8;"/><path d="M235.56075533770786,83.40553846153847h5v116.59446153846153h-5Z" style="fill: #4c78a8;"/><path d="M240.95648604376936,76.06599999999999h5v123.93400000000001h-5Z" style="fill: #4c78a8;"/><path d="M246.17816092060303,62.96784615384616h5v137.03215384615385h-5Z" style="fill: #4c78a8;"/><path d="M251.5738916266645,38.0656923076923h5v161.9343076923077h-5Z" style="fill: #4c78a8;"/><path d="M256.7955665034982,17.97200000000001h5v182.028h-5Z" style="fill: #4c78a8;"/><path d="M262.1912972095597,37.66061538461538h5v162.33938461538463h-5Z" style="fill: #4c78a8;"/><path d="M267.58702791562115,37.125538461538454h5v162.87446153846156h-5Z" style="fill: #4c78a8;"/><path d="M272.8087027924549,60.30800000000001h5v139.692h-5Z" style="fill: #4c78a8;"/><path d="M278.2044334985164,89.93123076923078h5v110.06876923076922h-5Z" style="fill: #4c78a8;"/><path d="M283.42610837535005,110.79184615384614h5v89.20815384615386h-5Z" style="fill: #4c78a8;"/><path d="M288.8218390814115,110.2056923076923h5v89.7943076923077h-5Z" style="fill: #4c78a8;"/><path d="M294.217569787473,115.49569230769232h5v84.50430769230768h-5Z" style="fill: #4c78a8;"/><path d="M299.09113300585113,92.09476923076923h5v107.90523076923077h-5Z" style="fill: #4c78a8;"/><path d="M304.4868637119126,70.99338461538463h5v129.00661538461537h-5Z" style="fill: #4c78a8;"/><path d="M309.70853858874625,61.54323076923076h5v138.45676923076923h-5Z" style="fill: #4c78a8;"/><path d="M315.10426929480775,40.03569230769231h5v159.9643076923077h-5Z" style="fill: #4c78a8;"/><path d="M320.3259441716415,25.412923076923065h5v174.58707692307695h-5Z" style="fill: #4c78a8;"/><path d="M325.7216748777029,39.54892307692308h5v160.45107692307693h-5Z" style="fill: #4c78a8;"/><path d="M331.1174055837644,61.010923076923085h5v138.9890769230769h-5Z" style="fill: #4c78a8;"/><path d="M336.3390804605981,63.78846153846154h5v136.21153846153845h-5Z" style="fill: #4c78a8;"/><path d="M341.73481116665954,94.68953846153848h5v105.31046153846152h-5Z" style="fill: #4c78a8;"/><path d="M346.9564860434932,106.4363076923077h5v93.5636923076923h-5Z" style="fill: #4c78a8;"/><path d="M352.35221674955477,109.79615384615384h5v90.20384615384616h-5Z" style="fill: #4c78a8;"/><path d="M357.74794745561627,108.05523076923076h5v91.94476923076924h-5Z" style="fill: #4c78a8;"/><path d="M362.7955665032221,97.77153846153846h5v102.22846153846154h-5Z" style="fill: #4c78a8;"/><path d="M368.1912972092836,82.568h5v117.432h-5Z" style="fill: #4c78a8;"/><path d="M373.41297208611735,44.05138461538463h5v155.94861538461538h-5Z" style="fill: #4c78a8;"/><path d="M378.8087027921788,51.81046153846154h5v148.18953846153846h-5Z" style="fill: #4c78a8;"/><path d="M384.03037766901247,17.164923076923078h5v182.8350769230769h-5Z" style="fill: #4c78a8;"/><path d="M389.42610837507397,21.785692307692315h5v178.21430769230767h-5Z" style="fill: #4c78a8;"/><path d="M394.8218390811354,37.99399999999999h5v162.006h-5Z" style="fill: #4c78a8;"/><path d="M400.04351395796914,54.59338461538461h5v145.4066153846154h-5Z" style="fill: #4c78a8;"/><path d="M405.43924466403064,90.61507692307693h5v109.38492307692307h-5Z" style="fill: #4c78a8;"/><path d="M410.6609195408643,98.61923076923075h5v101.38076923076925h-5Z" style="fill: #4c78a8;"/><path d="M416.05665024692576,101.77061538461538h5v98.22938461538462h-5Z" style="fill: #4c78a8;"/><path d="M421.45238095298726,104.83846153846153h5v95.16153846153847h-5Z" style="fill: #4c78a8;"/><path d="M426.3259441713654,73.88430769230769h5v126.11569230769231h-5Z" style="fill: #4c78a8;"/><path d="M431.7216748774269,58.81292307692307h5v141.18707692307692h-5Z" style="fill: #4c78a8;"/><path d="M436.94334975426057,47.29215384615384h5v152.70784615384616h-5Z" style="fill: #4c78a8;"/><path d="M442.339080460322,31.031692307692317h5v168.9683076923077h-5Z" style="fill: #4c78a8;"/><path d="M447.56075533715574,25.87107692307693h5v174.12892307692306h-5Z" style="fill: #4c78a8;"/><path d="M452.95648604321724,47.046307692307685h5v152.9536923076923h-5Z" style="fill: #4c78a8;"/><path d="M458.3522167492787,56.192153846153836h5v143.80784615384616h-5Z" style="fill: #4c78a8;"/><path d="M463.57389162611236,50.20276923076923h5v149.79723076923077h-5Z" style="fill: #4c78a8;"/><path d="M468.96962233217386,78.14123076923076h5v121.85876923076924h-5Z" style="fill: #4c78a8;"/><path d="M474.1912972090076,117.83261538461538h5v82.16738461538462h-5Z" style="fill: #4c78a8;"/><path d="M479.58702791506903,100.6306153846154h5v99.3693846153846h-5Z" style="fill: #4c78a8;"/><path d="M484.98275862113053,111.31923076923078h5v88.68076923076922h-5Z" style="fill: #4c78a8;"/><path d="M489.8563218395086,106.93523076923077h5v93.06476923076923h-5Z" style="fill: #4c78a8;"/><path d="M495.25205254557005,73.11738461538462h5v126.88261538461538h-5Z" style="fill: #4c78a8;"/><path d="M500.4737274224038,28.817538461538472h5v171.18246153846152h-5Z" style="fill: #4c78a8;"/><path d="M505.8694581284653,18.208923076923078h5v181.79107692307693h-5Z" style="fill: #4c78a8;"/><path d="M511.09113300529896,7.215076923076924h5v192.78492307692306h-5Z" style="fill: #4c78a8;"/><path d="M516.4868637113605,37.20292307692308h5v162.79707692307693h-5Z" style="fill: #4c78a8;"/><path d="M521.882594417422,44.89215384615384h5v155.10784615384617h-5Z" style="fill: #4c78a8;"/><path d="M527.1042692942556,49.49384615384616h5v150.50615384615384h-5Z" style="fill: #4c78a8;"/><path d="M532.5000000003171,86.45784615384615h5v113.54215384615385h-5Z" style="fill: #4c78a8;"/></g></g><path class="foreground" d="" style="display: none; fill: none;"/></g></g></g></svg></p></div><p></p>
+<p>Notice that nowhere in our specification did we need to say where to position axis labels, how many bars we needed, what scale range to use on either axis etc. That&apos;s the beauty of declarative specification &#x2013; we simply state <strong>what</strong> we want (&quot;<em>give me a bar chart that positions bars according to month and sizes them according to number of hires</em>&quot;), and Litvis/Vega-Lite works out how to draw it. This means we can spend more time thinking about visualization design, and less about coding the details required to render it.</p>
+<p>Suppose we wanted to incorporate the average length of time a bike was hired for into our visualization. One way of doing this would be to colour each bar according to the average hire length for that month. We could amend our specification to do this as follows:</p>
+<pre data-role="codeBlock" data-info="elm {l highlight=[11]}" class="language-elm" data-line="11"><span class="token hvariable">mySecondBarchart</span> <span class="token operator">:</span> <span class="token constant">Spec</span>
+<span class="token hvariable">mySecondBarchart</span> <span class="token operator">=</span>
+    <span class="token keyword">let</span>
+        <span class="token hvariable">data</span> <span class="token operator">=</span>
+            <span class="token hvariable">dataFromUrl</span> <span class="token string">&quot;https://gicentre.github.io/data/bicycleHiresLondon.csv&quot;</span>
+
+        <span class="token hvariable">enc</span> <span class="token operator">=</span>
+            <span class="token hvariable">encoding</span>
+                <span class="token operator">&lt;&lt;</span> <span class="token hvariable">position</span> <span class="token constant">X</span> <span class="token punctuation">[</span> <span class="token hvariable">pName</span> <span class="token string">&quot;Month&quot;</span><span class="token punctuation">,</span> <span class="token hvariable">pTemporal</span> <span class="token punctuation">]</span>
+                <span class="token operator">&lt;&lt;</span> <span class="token hvariable">position</span> <span class="token constant">Y</span> <span class="token punctuation">[</span> <span class="token hvariable">pName</span> <span class="token string">&quot;NumberOfHires&quot;</span><span class="token punctuation">,</span> <span class="token hvariable">pQuant</span> <span class="token punctuation">]</span>
+                <span class="token operator">&lt;&lt;</span> <span class="token hvariable">color</span> <span class="token punctuation">[</span> <span class="token hvariable">mName</span> <span class="token string">&quot;AvHireTime&quot;</span><span class="token punctuation">,</span> <span class="token hvariable">mQuant</span> <span class="token punctuation">]</span>
+    <span class="token keyword">in</span>
+    <span class="token hvariable">toVegaLite</span> <span class="token punctuation">[</span> <span class="token hvariable">width</span> <span class="token number">540</span><span class="token punctuation">,</span> <span class="token hvariable">data</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">enc</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token hvariable">bar</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">]</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="11" data-start="11">
+</div></div></pre><p>Here, line 11 adds another channel encoding, this time the <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#color">color</a> channel rather than position, encoding the data in the <code>AvHireTime</code> column of the dataset. When we were encoding position, we referenced the data column with <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#pName">pName</a> and its type with <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#pQuant">pQuant</a> or <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#pTemporal">pTemporal</a>, whereas when encoding a colour channel, we use <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#mName">mName</a> and <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#mQuant">mQuant</a> where <code>m</code> refers to &quot;mark&quot; rather than the <code>p</code> of &quot;position&quot;.</p>
+<p>With just this one extra line, our visualization now includes a default legend and coloured bars!</p>
+<p></p><div data-role="litvisOutput" style="display: inline;"><p interactive="false" style="display: inline-block"><!--?xml version="1.0" encoding="utf-8"?-->
+
+<svg class="marks" width="696" height="242" viewBox="0 0 696 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><rect width="696" height="242" style="fill: white;"/><defs><linearGradient id="gradient_0" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="rgb(207, 225, 242)"/><stop offset="0.07692307692307693" stop-color="rgb(194, 218, 237)"/><stop offset="0.15384615384615385" stop-color="rgb(178, 211, 232)"/><stop offset="0.23076923076923078" stop-color="rgb(160, 202, 227)"/><stop offset="0.3076923076923077" stop-color="rgb(141, 192, 221)"/><stop offset="0.38461538461538464" stop-color="rgb(120, 180, 216)"/><stop offset="0.46153846153846156" stop-color="rgb(101, 169, 210)"/><stop offset="0.5384615384615384" stop-color="rgb(83, 156, 204)"/><stop offset="0.6153846153846154" stop-color="rgb(66, 143, 197)"/><stop offset="0.6923076923076923" stop-color="rgb(51, 130, 190)"/><stop offset="0.7692307692307693" stop-color="rgb(37, 117, 181)"/><stop offset="0.8461538461538461" stop-color="rgb(26, 102, 172)"/><stop offset="0.9230769230769231" stop-color="rgb(16, 88, 159)"/><stop offset="1" stop-color="rgb(10, 74, 144)"/></linearGradient></defs><g transform="translate(72,5)"><g class="mark-group role-frame root"><g transform="translate(0,0)"><path class="background" d="M0.5,0.5h540v200h-540Z" style="fill: none; stroke: #ddd;"/><g><g class="mark-group role-axis"><g transform="translate(0.5,200.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-grid" style="pointer-events: none;"><line transform="translate(37,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(101,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(164,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(228,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(291,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(355,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(419,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(482,-200)" x2="0" y2="200" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-grid" style="pointer-events: none;"><line transform="translate(0,200)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,169)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,138)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,108)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,77)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,46)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/><line transform="translate(0,15)" x2="540" y2="0" style="fill: none; stroke: #ddd; stroke-width: 1; opacity: 1;"/></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-group role-axis"><g transform="translate(0.5,200.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-tick" style="pointer-events: none;"><line transform="translate(37,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(101,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(164,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(228,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(291,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(355,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(419,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(482,0)" x2="0" y2="5" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-label" style="pointer-events: none;"><text text-anchor="middle" transform="translate(37.02627257961074,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2011</text><text text-anchor="middle" transform="translate(100.55665024775398,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2012</text><text text-anchor="middle" transform="translate(164.26108374512503,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2013</text><text text-anchor="middle" transform="translate(227.79146141326825,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2014</text><text text-anchor="middle" transform="translate(291.3218390814115,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2015</text><text text-anchor="middle" transform="translate(354.85221674955477,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2016</text><text text-anchor="middle" transform="translate(418.55665024692576,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2017</text><text text-anchor="middle" transform="translate(482.08702791506903,15)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">2018</text></g><g class="mark-rule role-axis-domain" style="pointer-events: none;"><line transform="translate(0,0)" x2="540" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-title" style="pointer-events: none;"><text text-anchor="middle" transform="translate(270,30)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">Month</text></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-group role-axis"><g transform="translate(0.5,0.5)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rule role-axis-tick" style="pointer-events: none;"><line transform="translate(0,200)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,169)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,138)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,108)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,77)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,46)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/><line transform="translate(0,15)" x2="-5" y2="0" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-label" style="pointer-events: none;"><text text-anchor="end" transform="translate(-7,203)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">0</text><text text-anchor="end" transform="translate(-7,172.23076923076923)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">200,000</text><text text-anchor="end" transform="translate(-7,141.46153846153845)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">400,000</text><text text-anchor="end" transform="translate(-7,110.6923076923077)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">600,000</text><text text-anchor="end" transform="translate(-7,79.92307692307692)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">800,000</text><text text-anchor="end" transform="translate(-7,49.153846153846146)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1,000,000</text><text text-anchor="end" transform="translate(-7,18.384615384615373)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">1,200,000</text></g><g class="mark-rule role-axis-domain" style="pointer-events: none;"><line transform="translate(0,200)" x2="0" y2="-200" style="fill: none; stroke: #888; stroke-width: 1; opacity: 1;"/></g><g class="mark-text role-axis-title" style="pointer-events: none;"><text text-anchor="middle" transform="translate(-55.4873046875,100) rotate(-90) translate(0,-2)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">NumberOfHires</text></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-rect role-mark marks"><path d="M2.5000000016974324,198.08292307692307h5v1.9170769230769338h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M7.895730707758913,147.50723076923074h5v52.492769230769255h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M13.291461413820395,116.79092307692306h5v83.20907692307694h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M18.513136290654085,116.24430769230769h5v83.75569230769231h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M23.908866996715567,129.7993846153846h5v70.20061538461539h-5Z" style="fill: rgb(207, 225, 242);"/><path d="M29.13054187354926,156.06553846153847h5v43.934461538461534h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M34.52627257961074,137.97261538461538h5v62.02738461538462h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M39.92200328567222,138.7243076923077h5v61.27569230769231h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M44.795566504050335,114.43769230769232h5v85.56230769230768h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M50.19129721011181,96.36323076923077h5v103.63676923076923h-5Z" style="fill: rgb(10, 74, 144);"/><path d="M55.4129720869455,88.91199999999999h5v111.08800000000001h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M60.80870279300699,101.73584615384614h5v98.26415384615386h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M66.03037766984068,91.00707692307692h5v108.99292307692308h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M71.42610837590216,101.16307692307691h5v98.83692307692309h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M76.82183908196365,94.64923076923077h5v105.35076923076923h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M82.04351395879733,90.95353846153846h5v109.04646153846154h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M87.4392446648588,108.12446153846153h5v91.87553846153847h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M92.6609195416925,137.1186153846154h5v62.881384615384604h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M98.05665024775398,123.95h5v76.05h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M103.45238095381548,125.87292307692309h5v74.12707692307691h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M108.50000000142137,74.1216923076923h5v125.8783076923077h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M113.89573070748285,100.08107692307692h5v99.91892307692308h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M119.11740558431654,57.391999999999996h5v142.608h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M124.51313629037801,67.87615384615384h5v132.12384615384616h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M129.73481116721172,43.97323076923077h5v156.02676923076922h-5Z" style="fill: rgb(51, 130, 190);"/><path d="M135.1305418732732,21.05061538461539h5v178.94938461538462h-5Z" style="fill: rgb(51, 130, 190);"/><path d="M140.52627257933466,43.823846153846155h5v156.17615384615385h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M145.74794745616836,68.17446153846154h5v131.82553846153846h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M151.14367816222983,88.17030769230769h5v111.82969230769231h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M156.36535303906354,121.00861538461538h5v78.99138461538462h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M161.76108374512503,112.9863076923077h5v87.0136923076923h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M167.1568144511865,120.52492307692306h5v79.47507692307694h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M172.03037766956461,122.36753846153844h5v77.63246153846156h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M177.4261083756261,98.73384615384614h5v101.26615384615386h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M182.6477832524598,84.62553846153847h5v115.37446153846153h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M188.04351395852126,74.826h5v125.174h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M193.26518883535496,46.345384615384624h5v153.65461538461537h-5Z" style="fill: rgb(26, 102, 172);"/><path d="M198.66091954141643,60.89923076923076h5v139.10076923076923h-5Z" style="fill: rgb(26, 102, 172);"/><path d="M204.0566502474779,92.04246153846154h5v107.95753846153846h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M209.2783251243116,96.28399999999999h5v103.71600000000001h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M214.67405583037308,120.90061538461538h5v79.09938461538462h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M219.89573070720678,131.70123076923076h5v68.29876923076924h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M225.29146141326825,124.02h5v75.98h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M230.68719211932972,119.54769230769232h5v80.45230769230768h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M235.56075533770786,83.40553846153847h5v116.59446153846153h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M240.95648604376936,76.06599999999999h5v123.93400000000001h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M246.17816092060303,62.96784615384616h5v137.03215384615385h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M251.5738916266645,38.0656923076923h5v161.9343076923077h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M256.7955665034982,17.97200000000001h5v182.028h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M262.1912972095597,37.66061538461538h5v162.33938461538463h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M267.58702791562115,37.125538461538454h5v162.87446153846156h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M272.8087027924549,60.30800000000001h5v139.692h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M278.2044334985164,89.93123076923078h5v110.06876923076922h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M283.42610837535005,110.79184615384614h5v89.20815384615386h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M288.8218390814115,110.2056923076923h5v89.7943076923077h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M294.217569787473,115.49569230769232h5v84.50430769230768h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M299.09113300585113,92.09476923076923h5v107.90523076923077h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M304.4868637119126,70.99338461538463h5v129.00661538461537h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M309.70853858874625,61.54323076923076h5v138.45676923076923h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M315.10426929480775,40.03569230769231h5v159.9643076923077h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M320.3259441716415,25.412923076923065h5v174.58707692307695h-5Z" style="fill: rgb(51, 130, 190);"/><path d="M325.7216748777029,39.54892307692308h5v160.45107692307693h-5Z" style="fill: rgb(37, 117, 181);"/><path d="M331.1174055837644,61.010923076923085h5v138.9890769230769h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M336.3390804605981,63.78846153846154h5v136.21153846153845h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M341.73481116665954,94.68953846153848h5v105.31046153846152h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M346.9564860434932,106.4363076923077h5v93.5636923076923h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M352.35221674955477,109.79615384615384h5v90.20384615384616h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M357.74794745561627,108.05523076923076h5v91.94476923076924h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M362.7955665032221,97.77153846153846h5v102.22846153846154h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M368.1912972092836,82.568h5v117.432h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M373.41297208611735,44.05138461538463h5v155.94861538461538h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M378.8087027921788,51.81046153846154h5v148.18953846153846h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M384.03037766901247,17.164923076923078h5v182.8350769230769h-5Z" style="fill: rgb(51, 130, 190);"/><path d="M389.42610837507397,21.785692307692315h5v178.21430769230767h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M394.8218390811354,37.99399999999999h5v162.006h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M400.04351395796914,54.59338461538461h5v145.4066153846154h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M405.43924466403064,90.61507692307693h5v109.38492307692307h-5Z" style="fill: rgb(194, 218, 237);"/><path d="M410.6609195408643,98.61923076923075h5v101.38076923076925h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M416.05665024692576,101.77061538461538h5v98.22938461538462h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M421.45238095298726,104.83846153846153h5v95.16153846153847h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M426.3259441713654,73.88430769230769h5v126.11569230769231h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M431.7216748774269,58.81292307692307h5v141.18707692307692h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M436.94334975426057,47.29215384615384h5v152.70784615384616h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M442.339080460322,31.031692307692317h5v168.9683076923077h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M447.56075533715574,25.87107692307693h5v174.12892307692306h-5Z" style="fill: rgb(83, 156, 204);"/><path d="M452.95648604321724,47.046307692307685h5v152.9536923076923h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M458.3522167492787,56.192153846153836h5v143.80784615384616h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M463.57389162611236,50.20276923076923h5v149.79723076923077h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M468.96962233217386,78.14123076923076h5v121.85876923076924h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M474.1912972090076,117.83261538461538h5v82.16738461538462h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M479.58702791506903,100.6306153846154h5v99.3693846153846h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M484.98275862113053,111.31923076923078h5v88.68076923076922h-5Z" style="fill: rgb(178, 211, 232);"/><path d="M489.8563218395086,106.93523076923077h5v93.06476923076923h-5Z" style="fill: rgb(160, 202, 227);"/><path d="M495.25205254557005,73.11738461538462h5v126.88261538461538h-5Z" style="fill: rgb(101, 169, 210);"/><path d="M500.4737274224038,28.817538461538472h5v171.18246153846152h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M505.8694581284653,18.208923076923078h5v181.79107692307693h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M511.09113300529896,7.215076923076924h5v192.78492307692306h-5Z" style="fill: rgb(51, 130, 190);"/><path d="M516.4868637113605,37.20292307692308h5v162.79707692307693h-5Z" style="fill: rgb(66, 143, 197);"/><path d="M521.882594417422,44.89215384615384h5v155.10784615384617h-5Z" style="fill: rgb(120, 180, 216);"/><path d="M527.1042692942556,49.49384615384616h5v150.50615384615384h-5Z" style="fill: rgb(141, 192, 221);"/><path d="M532.5000000003171,86.45784615384615h5v113.54215384615385h-5Z" style="fill: rgb(178, 211, 232);"/></g><g class="mark-group role-legend"><g transform="translate(558,0)"><path class="background" d="M0,0h61v216h-61Z" style="pointer-events: none; fill: none;"/><g><g class="mark-group role-legend-entry"><g transform="translate(0,16)"><path class="background" d="M0,0h0v0h0Z" style="pointer-events: none; fill: none;"/><g><g class="mark-rect role-legend-gradient" style="pointer-events: none;"><path d="M0,0h16v200h-16Z" style="fill: url(#gradient_0); stroke: #ddd; stroke-width: 0; opacity: 1;"/></g><g class="mark-text role-legend-label" style="pointer-events: none;"><text text-anchor="start" transform="translate(18,187.6153846153846)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">15</text><text text-anchor="start" transform="translate(18,110.6923076923077)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">20</text><text text-anchor="start" transform="translate(18,33.769230769230774)" style="font-family: sans-serif; font-size: 10px; fill: #000; opacity: 1;">25</text></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g><g class="mark-text role-legend-title" style="pointer-events: none;"><text text-anchor="start" transform="translate(0,9)" style="font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #000; opacity: 1;">AvHireTime</text></g></g><path class="foreground" d="" style="pointer-events: none; display: none; fill: none;"/></g></g></g><path class="foreground" d="" style="display: none; fill: none;"/></g></g></g></svg></p></div><p></p>
+<div class="infobox" ns-role="label-child">
+<p>You may have noticed the links in these notes to documentation describing various <em>elm-vegalite</em> functions. I recommend bookmarking this <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite">VegaLite API documentation page</a> as it is a valuable resource for customising your litvis visualization specifications. You may also find it useful to bookmark <a href="https://package.elm-lang.org/packages/elm/core/latest/">Elm&apos;s core API documentation page</a>.</p>
+</div>
+<h2 class="mume-header" id="3-data-visualization-models">3. Data Visualization Models</h2>
+
+<p>You&#x2019;ve seen many examples of data visualization (e.g. the <a href="https://www.informationisbeautifulawards.com/showcase?award=2019&amp;pcategory=winner&amp;type=awards">Information is Beautiful showcase</a>) that help us to explore <em>why</em> we create visualizations, and you&#x2019;ve seen that we can construct our own visualizations by specifying <em>what</em> we wish to create. In essence, the aim of this module is to bring together those two approaches.</p>
+<p>In attempting to explore and answer the <em>why</em> questions of visualization construction, we draw upon a range of skills including creativity, storytelling, task analysis and design. To make that easier, we will explore some frameworks that enable us to structure the questions we might ask ourselves in the design process. Two of the most relevant are those created by Tamara Munzner &#x2014; one of the world&#x2019;s leading information visualization academics, and the Leland Wilkinson who formalised the <a href="#5-recommended-reading">Grammar of Graphics</a>.</p>
+<h3 class="mume-header" id="31-munzners-visualization-analysis-and-design-framework">3.1 Munzner&apos;s Visualization Analysis and Design Framework</h3>
+
+<p>Munzner&#x2019;s framework, that forms the structure of her book <a href="#5-recommended-reading">Visualization Analysis and Design</a>, is centred on three questions that drive data visualization design and production.</p>
+<ol>
+<li><strong>What</strong> are you wishing to show?</li>
+<li><strong>Why</strong> is the task, for which visualization contributes, being performed?</li>
+<li><strong>How</strong> is the visualization constructed?</li>
+</ol>
+<p>We will focus on the first two of these questions during this module (leaving the <em>how</em> question to be solved by Vega-Lite), but it is worth emphasising now that the purpose of the framework is to make the task of choosing from the huge space of data, tasks and idioms (techniques) easier. It recognises that good visualization is as much thinking about the task it is designed to address as it is the selection of appropriate data and the creating of appropriate techniques or idioms.</p>
+<p><a href="#5-recommended-reading">Chapter 1</a> of her book elaborates on this approach and is recommended reading for all.</p>
+<h3 class="mume-header" id="32-the-grammar-of-graphics">3.2 The Grammar of Graphics</h3>
+
+<p>Several visualization systems including Vega-Lite (and notably R&apos;s <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">ggplot2</a>) base their approach on Leland Wilkinson&apos;s <a href="#5-recommended-reading">Grammar of Graphics</a> (or GoG for short). The GoG provides a formal approach to considering the transformation steps necessary to turn some data into something visual. These are summarised below:</p>
+<p><img src="https://staff.city.ac.uk/~jwo/datavis2020/session01/images/grammarOfGraphics.png" alt="grammar of graphics transforms"></p>
+<p>It is worth noting that for any given visualization, one or more of these 7 steps may involve an <em>identity transform</em> (i.e. a transform that does not have any effect). For example, in the bicycle hires example above, the &quot;statistics&quot; stage is an identity transform in that no new statistics are generated between the &quot;algebra&quot; and &quot;geometry&quot; steps.</p>
+<p>The GoG is useful because it identifies the steps we have to go through to fully and unambiguously specify what we want a visualization to do. It also helps us to ask &apos;why&apos; questions at each stage to assist us in justifying our visualization designs.</p>
+<p>It is not a perfect model, for example, the original GoG does not mention how interaction may be incorporated into a specification, nor how multiple views may be combined in a single visualization. We will consider how Vega-Lite (and litvis) has extended the grammar to incorporate these in later sessions, but if you would like a look-ahead, see this <a href="https://youtu.be/9uaHRWj04D4">OpenVis video presentation</a> from the Vega-Lite team.</p>
+<p>A note on <em>aesthetics</em>: Wilkinson identifies the last transformation &quot;aesthetics&quot; as the mapping of spatially embedded transformations of data into some perceivable form. That is, the transformation of the non-graphic into the graphic (or auditory or olfactory).</p>
+<p>Other have argued that &quot;aesthetics&quot; is more than this. For example, Ge Wang, in his book <em>Artful Design</em> says</p>
+<blockquote>
+<p>Aesthetics is how we experience a thing &#x2014;how it emotionally, intellectually, psychologically, and socially affects us. It is everything <strong>beyond</strong> the thing&apos;s function. Yet aesthetics does not usurp or live apart from functionality; instead, it gives context, meaning, and essence to a thing, making it what it is.</p>
+<p>In the kitchen of design, aesthetics is not the spice with which you garnish the casserole of functionality: it <strong>is</strong> the casserole, the ingredients you bake into it.</p>
+</blockquote>
+<p>We will discuss this wider view of aesthetics in later sessions as we consider critiques of visualization design and its role in storytelling and emotional <em>affect</em>.</p>
+<h2 class="mume-header" id="4-conclusions">4. Conclusions</h2>
+
+<p>Data visualization is still a comparatively new and exciting field in modern data analysis and communication. There are vast numbers of digital datasets available to us, but that we are often poorly equipped to handle such data and extract useful information from it. Data visualization offers an engaging and powerful means to explore the complexities of datasets and to communicate findings and stories about those data to others.</p>
+<p>By taking this module, and following the approach of <em>literate visualization</em>, you will become equipped not only to evaluate and design effective data visualization, but also to build your own data visualization applications. We have seen in this first session how to get the software litvis to create simple data visualizations enclosed in a formatted text document. We will continue to use Litvis to build increasingly sophisticated documents that answer both the <em>what</em> and <em>why</em> of data visualization, and in doing so, you will develop your own visualization design skills.</p>
+<h2 class="mume-header" id="5-recommended-reading">5. Recommended Reading</h2>
+
+<p><strong>Kirk, A.</strong> (2019) Chapter 1: <em>Defining data visualization</em>, pp.15-30 in <a href="http://tinyurl.com/ybevhqo6">Data Visualisation: A Handbook for Data Driven Design</a>, Sage.</p>
+<p><strong>Munzner, T.</strong> (2015) Chapter 1: <em>What&#x2019;s Vis and Why Do It?</em>, pp.1-19 in <a href="http://tinyurl.com/ycqp5cf2">Visualization Analysis and Design</a>, CRC Press.</p>
+<p><strong>Wilkinson, L.</strong> (2010a) <a href="http://tinyurl.com/yc44kt2q">The Grammar of Graphics: Wiley interdisciplinary reviews</a>. <em>Computational Statistics</em>, 2010 (2), pp.673&#x2013;677.</p>
+<p><strong>Wood, J., Kachkaev, A. and Dykes, J.</strong> (2019) <a href="https://openaccess.city.ac.uk/20081">Design exposition with literate visualization</a>. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 25(1) pp.759-768.</p>
+<h3 class="mume-header" id="51-references">5.1 References</h3>
+
+<p><strong>Wilkinson, L.</strong> (2010b) <a href="http://tinyurl.com/y6vz295q">The Grammar of Graphics</a>. Springer, ISBN: 978 0387 24544 7</p>
+<hr>
+<h2 class="mume-header" id="6-practical-exercises">6. Practical Exercises</h2>
+
+<div class="task" ns-role="label-child"><fieldset ns-role="label-child"><legend ns-role="label-child">Task</legend>
+<p>Every week I will set some non-assessed exercises for you to complete in the labs following each lecture, and/or in your own time. Although they are not formally assessed, you should complete all of them each week as later sessions depend on you understanding the material covered previously and they will help you build the skills necessary to complete the assessed coursework.</p>
+</fieldset></div>
+<p>A week after each session I will provide you with written <strong>feedback</strong> on how you have got on (based on observations and questions in the labs), along with answers to the questions.</p>
+<h3 class="mume-header" id="1-register-with-the-datavis-slack">1. Register with the datavis slack</h3>
+
+<p>If you haven&apos;t already done so, create an account on the <a href="https://dataviscity.slack.com">dataviscity slack</a>. You will need to use your do so using your <code>.city.ac.uk</code> email address when requested. This will be the main forum for discussion and questions/answers relating to the content of this module.</p>
+<h3 class="mume-header" id="2-datavis-evaluation">2. Datavis evaluation</h3>
+
+<p>As indicated in the lecture notes, choose one of the examples from the <a href="https://www.informationisbeautifulawards.com/showcase?action=index&amp;award=2019&amp;controller=showcase&amp;page=1&amp;pcategory=short-list&amp;type=awards">Information is Beautiful awards</a> and provide a brief critique of it using the 5 &apos;data visualization criteria&apos;:</p>
+<ol>
+<li>Represents a complex dataset graphically that could not as effectively be represented via other means.</li>
+<li>Often emphasises <em>connections</em> and <em>comparisons</em> between items of data.</li>
+<li>Frequently involves <em>interaction</em> to allow a user to influence what they see.</li>
+<li>A <em>narrative</em> providing a clear answer to a question without extraneous details</li>
+<li>Generates an <em>aesthetic response</em> in order to encourage users to engage with the data or question.</li>
+</ol>
+<p>Post your critique in the <em>#evaluating_datavis</em> channel on the <a href="https://dataviscity.slack.com">dataviscity slack</a>.</p>
+<h3 class="mume-header" id="2-setting-up-litvis">2. Setting up Litvis</h3>
+
+<p>If you haven&apos;t done so already, <a href="https://staff.city.ac.uk/~jwo/datavis2020/programming/installingLitvis.pdf">install litvis on your computer</a>. This is a one-off process but once set up, should allow you to view, edit and create litvis documents, including these lecture notes.</p>
+<p>You should also download and uncompress <a href="http://staff.city.ac.uk/~jwo/datavis2020/programming/datavis.zip">datavis.zip</a> somewhere on your computer to create a useful litvis folder structure for this module:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>&#x2517;&#x2501;&#x2501; datavis
+        &#x2523;&#x2501;&#x2501; coursework
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkPG.md
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkUG.md
+        &#x2503;     &#x2517;&#x2501;&#x2501; proposal.md
+        &#x2523;&#x2501;&#x2501; css
+        &#x2503;     &#x2517;&#x2501;&#x2501; datavis.less
+        &#x2523;&#x2501;&#x2501; narrative-schemas
+        &#x2503;     &#x2523;&#x2501;&#x2501; algebra.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkPG.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; courseworkUG.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; dialogue.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; feminist.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; idiom.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; proposal.yaml
+        &#x2503;     &#x2523;&#x2501;&#x2501; tdia.yaml
+        &#x2503;     &#x2517;&#x2501;&#x2501; teaching.yaml
+        &#x2523;&#x2501;&#x2501; session01
+        &#x2503;     &#x2523;&#x2501;&#x2501; session01.md
+        &#x2503;     &#x2517;&#x2501;&#x2501; codingGym.md
+        &#x2523;&#x2501;&#x2501; session02
+        &#x2523;&#x2501;&#x2501; session03
+        &#x2523;&#x2501;&#x2501; session04
+        &#x2523;&#x2501;&#x2501; session05
+        &#x2523;&#x2501;&#x2501; session06
+        &#x2523;&#x2501;&#x2501; session07
+        &#x2523;&#x2501;&#x2501; session08
+        &#x2523;&#x2501;&#x2501; session09
+        &#x2517;&#x2501;&#x2501; session10
+</code></pre><p>This zip file contains the content for this first session, but in future weeks you should download each session (<code>session02.md</code>, <code>session03.md</code> etc.) from Moodle and insert them into the appropriate folder.</p>
+<h3 class="mume-header" id="3-creating-a-litvis-sketch">3. Creating a litvis sketch</h3>
+
+<p>Open Atom and create a new empty document called <code>bicyclehires.md</code> in <code>session01</code>. Copy the following code into it and check you can view the formatted visualization (with the menu option <code>Packages-&gt;Markdown Preview Enhanced with litvis -&gt; Toggle</code>, or keyboard shortcut <code>Ctrl/Cmd Shift-M</code>):</p>
+<pre data-role="codeBlock" data-info class="language-"><code>---
+elm:
+  dependencies:
+    gicentre/elm-vegalite: latest
+---
+
+```elm {l=hidden}
+import VegaLite exposing (..)
+```
+
+```elm {v}
+myBarchart : Spec
+myBarchart =
+    let
+        data =
+            dataFromUrl &quot;https://gicentre.github.io/data/bicycleHiresLondon.csv&quot;
+
+        enc =
+            encoding
+                &lt;&lt; position X [ pName &quot;Month&quot;, pTemporal ]
+                &lt;&lt; position Y [ pName &quot;NumberOfHires&quot;, pQuant ]
+    in
+    toVegaLite [ width 540, data [], enc [], bar [] ]
+```
+</code></pre><p>Add some brief (markdown) text to the document explaining what the visualization is intended to show and any patterns you have observed from the visualization.</p>
+<h3 class="mume-header" id="4-creating-a-scatterplot">4. Creating a scatterplot</h3>
+
+<p>Add to the document you have created in the previous task by providing a specification to display a scatterplot comparing number of hires per month with the average time of a bike hire in a month.</p>
+<p><strong><em>Hint:</em></strong> A scatterplot uses the <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#circle">circle mark</a> rather than <code>bar</code> mark to symbolise each pair of values. You will also have to change which data columns will be encoded by <code>position X</code> and <code>position Y</code>.</p>
+<h3 class="mume-header" id="5-data-challenge">5. Data Challenge</h3>
+
+<p>The site <a href="https://whatukthinks.org/eu/">What the UK thinks EU</a> tracks and analyses UK attitudes towards the European Union. It includes data on opinion polls that have asked the question &quot;<em>Should the United Kingdom remain a member of the European Union, or leave the European Union?</em>&quot; since 2016.</p>
+<p>The first few lines of the data table look like this:</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Pollster</th>
+<th>Answer</th>
+<th>Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019-12-12 00:00</td>
+<td>BMG Research</td>
+<td>remain</td>
+<td>49</td>
+</tr>
+<tr>
+<td>2019-12-12 00:00</td>
+<td>BMG Research</td>
+<td>leave</td>
+<td>41</td>
+</tr>
+<tr>
+<td>2019-12-12 00:00</td>
+<td>BMG Research</td>
+<td>no answer / don&apos;t know</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2019-12-06 00:00</td>
+<td>BMG Research</td>
+<td>remain</td>
+<td>51</td>
+</tr>
+<tr>
+<td>2019-12-06 00:00</td>
+<td>BMG Research</td>
+<td>leave</td>
+<td>42</td>
+</tr>
+<tr>
+<td>2019-12-06 00:00</td>
+<td>BMG Research</td>
+<td>no answer / don&apos;t know</td>
+<td>7</td>
+</tr>
+<tr>
+<td>2019-11-29 00:00</td>
+<td>BMG Research</td>
+<td>remain</td>
+<td>50</td>
+</tr>
+<tr>
+<td>2019-11-29 00:00</td>
+<td>BMG Research</td>
+<td>leave</td>
+<td>42</td>
+</tr>
+<tr>
+<td>2019-11-29 00:00</td>
+<td>BMG Research</td>
+<td>no answer / don&apos;t know</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2019-11-21 00:00</td>
+<td>BMG Research</td>
+<td>remain</td>
+<td>51</td>
+</tr>
+<tr>
+<td>2019-11-21 00:00</td>
+<td>BMG Research</td>
+<td>leave</td>
+<td>43</td>
+</tr>
+<tr>
+<td>2019-11-21 00:00</td>
+<td>BMG Research</td>
+<td>no answer / don&apos;t know</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2019-11-15 00:00</td>
+<td>BMG Research</td>
+<td>remain</td>
+<td>50</td>
+</tr>
+<tr>
+<td>2019-11-15 00:00</td>
+<td>BMG Research</td>
+<td>leave</td>
+<td>42</td>
+</tr>
+<tr>
+<td>2019-11-15 00:00</td>
+<td>BMG Research</td>
+<td>no answer / don&apos;t know</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2019-10-30 00:00</td>
+<td>Survation</td>
+<td>remain</td>
+<td>52</td>
+</tr>
+<tr>
+<td>2019-10-30 00:00</td>
+<td>Survation</td>
+<td>leave</td>
+<td>45</td>
+</tr>
+<tr>
+<td>2019-10-30 00:00</td>
+<td>Survation</td>
+<td>no answer / don&apos;t know</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+<td>:</td>
+</tr>
+</tbody>
+</table>
+<p>You can access a copy of the data, which are stored in JSON format rather than CSV at<br>
+<a href="https://gicentre.github.io/data/euPolls.json">https://gicentre.github.io/data/euPolls.json</a>.</p>
+<p>Can you create a litvis document that displays some aspect of these data and provides a brief justification for your visualization design and any patterns it reveals?</p>
+<p><strong><em>Hint:</em></strong> The visualization specification is likely to be similar to the bicycle hire example above, but you will need to change the URL of the data source, the names of the columns referenced by <code>pName</code> and <code>mName</code>. You may also wish to consider other graphic marks in addition to <code>bar</code> and <code>circle</code>, such as <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#line">line</a> and <a href="https://package.elm-lang.org/packages/gicentre/elm-vegalite/latest/VegaLite#area">area</a>.</p>
+<h3 class="mume-header" id="6-design-challenge">6. Design Challenge</h3>
+
+<p>Were you able to implement your design successfully in the data challenge above? It is likely that your design was constrained by what you were able to code in elm-vegalite. As a final design challenge, try sketching an alternative design on paper. Think about &apos;the human in the loop&apos;, and what would be most effective in providing a meaningful depiction of the polling data.</p>
+<p>Take a photo of your sketch and add it to these notes. You can add an image to a litvis document by storing the image file to the same folder and then adding the line</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token url">![image caption](myImagefile.jpg)</span>
+</pre><p>where <code>myImagefile.jpg</code> is the name of the image file you have placed in the litvis document folder.</p>
+<hr>
+<p><em>Check your progress.</em></p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> I can critique a data visualization based on the five criteria given in the lecture notes.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> I have installed the <em>Atom</em> editor with the <em>litvis</em> plug-in on my computer.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> I can write simple markdown text in a litvis document.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> I can specify a simple visualization using elm-vega.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> I have related a visualization design and specification to Munzner&apos;s &apos;what-why-how&apos; framework.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> I have related a visualization specification to some of Wilkinson&apos;s 7 <em>Grammar of Graphics</em> steps.</li>
+</ul>
+</div>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

@@ -68,6 +68,34 @@ Create separate functions that display the following, each in their own `raw` co
 - A quote of your choice about data visualization.
 - The number of legs of a titmouse.
 
+Answers:
+
+```elm {l raw}
+first_name : String
+first_name =
+    "Prasana"
+
+
+last_name : String
+last_name =
+    "Kalanathan"
+
+
+year_of_birth : Int
+year_of_birth =
+    1997
+
+
+pi : Float
+pi =
+    3.141592
+
+
+quote : String
+quote =
+    "I love visual representation of data"
+```
+
 {|task)}
 
 ## 1.2. Simple functions with operators
@@ -91,5 +119,28 @@ Try these exercises by creating functions to calculate:
 - The number of seconds in a leap-year.
 - Your _James Bond name_ (i.e. in the form "Bond, James Bond").
 - The mean (average) of the numbers 1 to 5.
+
+Answers:
+
+```elm {l raw}
+sum_up : Int
+sum_up =
+    1 + 2 + 3 + 4 + 5
+
+
+div : Float
+div =
+    22 / 7
+
+
+bond_name : String
+bond_name =
+    last_name ++ "," ++ first_name ++ " " ++ last_name
+
+
+average : Float
+average =
+    toFloat sum_up / 5
+```
 
 {|task)}
