@@ -106,6 +106,32 @@ Choosing from the list-generating functions above, create separate functions to 
 
 {|task)}
 
+```elm{l raw}
+num1to61 : List Int
+num1to61 =
+    List.range 1 61
+
+
+numNeg : List Int
+numNeg =
+    List.range -1000 -980
+
+
+addName : List String
+addName =
+    "Prasana" :: [ "John", "Paul", "George", "Ringo" ]
+
+
+eightPieces : List String
+eightPieces =
+    List.repeat 8 "pieces of 8"
+
+
+comboList : List String
+comboList =
+    [ "lion", "rhino" ] ++ [ "banana", "grapes" ] ++ [ "granite" ]
+```
+
 ## 2.3. Summarising Lists
 
 Elm has some in-built functions that can summarise the contents of a list including [List.length](https://package.elm-lang.org/packages/elm/core/latest/List#length), [List.sum](https://package.elm-lang.org/packages/elm/core/latest/List#sum) and [List.product](https://package.elm-lang.org/packages/elm/core/latest/List#product). For example:
@@ -136,3 +162,19 @@ Using the list-summarising functions above, create separate functions to do the 
 - Calculate 6 factorial (equivalent to `6 * 5 * 4 * 3 * 2 * 1`)
 
 {|task)}
+
+```elm{l raw}
+sumNum : Int
+sumNum =
+    List.sum (List.range 1 61)
+
+
+numList : Int
+numList =
+    List.length ([] ++ [ "John", "Paul", "George", "Ringo" ])
+
+
+avgNum : Int
+avgNum =
+    sumNum // List.length num1to61
+```

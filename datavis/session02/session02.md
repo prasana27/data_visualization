@@ -70,6 +70,10 @@ Add your answers here.
 - Sketch designs about
 - Design from the ground up
 - Should not require lots of cognition to understand data vis
+- Try not to create a micro language
+- Provide meaningful annotations and not just a caption
+- Understanding beats beauty
+- Let data drive the design and not the other way around
 
 {|annotation)}
 
@@ -703,9 +707,9 @@ Share your sketch by posting a photo of it and brief explanation on Slack.
 
 _Check your progress._
 
-- [ ] I can recognise and apply the four contrasting approaches to a visualization design.
+- [x] I can recognise and apply the four contrasting approaches to a visualization design.
 - [ ] I can distinguish different visualization objectives such as explanation, reflection, art and analysis.
-- [ ] I have created litvis documents with branching narratives to explore alternative design options.
-- [ ] I have specified a Vega-Lite visualization that follows some of Tufte's design principles.
-- [ ] I can identify hallucinators, distractors, jumblers and misleaders in a visualization.
-- [ ] I have created a hand-drawn sketch of some personal data visualization.
+- [x] I have created litvis documents with branching narratives to explore alternative design options.
+- [x] I have specified a Vega-Lite visualization that follows some of Tufte's design principles.
+- [x] I can identify hallucinators, distractors, jumblers and misleaders in a visualization.
+- [x] I have created a hand-drawn sketch of some personal data visualization.
